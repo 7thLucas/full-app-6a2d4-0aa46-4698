@@ -1,0 +1,102 @@
+<style>
+  .mode-landscape .sl-main { flex-direction: row; gap: 1.5rem; }
+  .mode-portrait .sl-main { flex-direction: column; gap: 1rem; }
+  .mode-landscape .sl-left { flex: 1; }
+  .mode-landscape .sl-right { flex: 1; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-10">
+
+    <!-- Header -->
+    <div class="mb-5 flex-shrink-0">
+      <div class="flex items-center gap-2 mb-1">
+        <div class="w-1 h-5 rounded-full bg-indigo-600"></div>
+        <span class="text-indigo-600 text-xs font-bold tracking-widest uppercase">North Star</span>
+      </div>
+      <div class="flex items-center justify-between">
+        <h2 class="text-3xl font-black text-slate-900">Weekly Verified Operations</h2>
+        <span class="bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold px-3 py-1.5 rounded-full">Projected impact — based on your inputs</span>
+      </div>
+    </div>
+
+    <div class="sl-main flex flex-1 min-h-0">
+
+      <!-- Left: Operations + formulae -->
+      <div class="sl-left flex flex-col gap-4 min-h-0">
+
+        <!-- Operation 1: Messages -->
+        <div class="border border-slate-200 rounded-2xl p-5 flex flex-col gap-2.5">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-sm text-white">💬</div>
+            <h3 class="text-sm font-bold text-slate-900">Pesan Terkirim / Week</h3>
+          </div>
+          <p class="text-xs text-slate-500 leading-snug">A message successfully delivered from sender to recipient — the core engagement operation.</p>
+          <div class="bg-slate-50 rounded-xl px-4 py-2.5 text-xs font-mono text-slate-600 leading-relaxed">
+            <span class="text-amber-600 font-bold">[DAU]</span> users
+            × <span class="text-amber-600 font-bold">[avg msgs/user/day]</span>
+            × 7 days = WVO
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full">Assumption — DAU: 10,000</span>
+            <span class="bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full">Assumption — msgs/day: 20</span>
+          </div>
+          <div class="bg-indigo-600 rounded-xl px-4 py-2 text-sm font-bold text-white">
+            10,000 × 20 × 7 = <span class="text-indigo-200">1,400,000 ops/week</span>
+          </div>
+        </div>
+
+        <!-- Operation 2: Transactions -->
+        <div class="border border-slate-200 rounded-2xl p-5 flex flex-col gap-2.5">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center text-sm text-white">💳</div>
+            <h3 class="text-sm font-bold text-slate-900">Transaksi Diproses / Week</h3>
+          </div>
+          <p class="text-xs text-slate-500 leading-snug">A payment or transfer completed in-app — the core monetisable operation.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full">Assumption — paying users: 5% of DAU</span>
+            <span class="bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full">Assumption — 2 tx/user/week</span>
+          </div>
+          <div class="bg-emerald-600 rounded-xl px-4 py-2 text-sm font-bold text-white">
+            500 users × 2 tx = <span class="text-emerald-200">1,000 transactions/week</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Value projection -->
+      <div class="sl-right flex flex-col gap-4 min-h-0">
+
+        <div class="bg-slate-900 rounded-2xl p-6 flex flex-col gap-4 flex-1">
+          <div>
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Platform Value</span>
+            <p class="text-xs text-slate-500 mt-1">Derived from transaction fee revenue</p>
+          </div>
+
+          <div class="border-t border-slate-700 pt-4">
+            <p class="text-xs text-slate-400 mb-1">Weekly revenue</p>
+            <p class="text-xs font-mono text-slate-400 mb-1.5">1,000 tx × Rp 150,000 avg × 2% fee</p>
+            <span class="text-2xl font-black text-white">Rp 3,000,000<span class="text-slate-400 text-sm font-normal"> / week</span></span>
+            <p class="text-xs text-amber-600 mt-1">Assumption — avg tx value: Rp 150,000 · fee: 2%</p>
+          </div>
+
+          <div class="border-t border-slate-700 pt-4">
+            <p class="text-xs text-slate-400 mb-1">Annual revenue</p>
+            <p class="text-xs font-mono text-slate-400 mb-1.5">Rp 3,000,000 × 52 weeks</p>
+            <span class="text-2xl font-black text-emerald-400">Rp 156,000,000<span class="text-slate-400 text-sm font-normal"> / year</span></span>
+          </div>
+
+          <div class="border-t border-slate-700 pt-4">
+            <p class="text-xs text-slate-400 mb-1">Scale lever</p>
+            <p class="text-sm text-slate-200 leading-snug">Every 10× growth in DAU → 10× WVO → 10× revenue, with no proportional infrastructure increase.</p>
+          </div>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex-shrink-0">
+          <p class="text-xs text-amber-700 leading-relaxed">All figures are projections from the adjustable assumptions above. Update DAU, messages/day, transaction volume, and fee rate to reflect your actual targets.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
