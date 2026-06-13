@@ -1,0 +1,77 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-content { width: 58%; }
+  .mode-landscape .sl-visual { width: 42%; }
+  .mode-portrait .sl-content { width: 100%; flex: 1; }
+  .mode-portrait .sl-visual { width: 100%; height: 32%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Content: Problem + Solution stacked -->
+    <div class="sl-content flex flex-col justify-center gap-5 p-12">
+
+      <div class="flex items-center gap-2">
+        <div class="w-1 h-6 rounded-full bg-indigo-600"></div>
+        <span class="text-indigo-600 text-xs font-bold tracking-widest uppercase">The Foundation</span>
+      </div>
+
+      <!-- Problem -->
+      <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-lg">⚠️</span>
+          <h2 class="text-base font-bold text-slate-900">The Problem</h2>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-red-400 flex-shrink-0 mt-1.5"></span>
+            <p class="text-xs text-slate-600 leading-snug">People juggle <strong class="text-slate-800">3–5 separate apps</strong> daily just for messaging, social sharing, and payments — constant friction, split attention.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-red-400 flex-shrink-0 mt-1.5"></span>
+            <p class="text-xs text-slate-600 leading-snug"><strong class="text-slate-800">Fragmented notifications and split identities</strong> make it impossible to have one trusted, unified communication layer.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-red-400 flex-shrink-0 mt-1.5"></span>
+            <p class="text-xs text-slate-600 leading-snug">Wallets are <strong class="text-slate-800">disconnected from conversations</strong> — paying within a chat or linking transactions to messages simply doesn't exist.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solution -->
+      <div class="bg-indigo-600 rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-lg">✨</span>
+          <h2 class="text-base font-bold text-white">The Solution</h2>
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-indigo-300 flex-shrink-0 mt-1.5"></span>
+            <p class="text-xs text-indigo-100 leading-snug">A <strong class="text-white">single super app</strong> — messaging, social moments, voice/video, payments, and mini-programs all in one place.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-indigo-300 flex-shrink-0 mt-1.5"></span>
+            <p class="text-xs text-indigo-100 leading-snug"><strong class="text-white">Unified identity and wallet</strong> — one login, one contact list, one payment method across every interaction.</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-indigo-300 flex-shrink-0 mt-1.5"></span>
+            <p class="text-xs text-indigo-100 leading-snug"><strong class="text-white">An open mini-program platform</strong> — merchants and developers reach users where they already are, no separate installs needed.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Visual -->
+    <div class="sl-visual relative overflow-hidden bg-slate-900">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=abstract%20concept%20art%20showing%20fragmented%20disconnected%20app%20icons%20converging%20into%20a%20single%20glowing%20unified%20platform%2C%20deep%20dark%20slate%20background%2C%20indigo%20and%20violet%20light%20rays%2C%20clean%20minimalist%20editorial%20style"
+        alt="Fragmentation to unity"
+        class="w-full h-full object-cover opacity-75"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent 55%, rgba(15,23,42,0.45) 100%);"></div>
+    </div>
+
+  </div>
+</section>
